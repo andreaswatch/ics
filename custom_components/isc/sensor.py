@@ -14,12 +14,16 @@ from homeassistant.const import (CONF_NAME)
 
 
 from icalendar import Calendar
-from tzlocal import get_localzone
+#from tzlocal import get_localzone <-- caused error on my machine
 import recurring_ical_events
 import datetime
 import traceback
 from .const import *
 import re
+
+def get_localzone():
+	return None #<-- return just None
+
 
 _LOGGER = logging.getLogger(__name__)
 
